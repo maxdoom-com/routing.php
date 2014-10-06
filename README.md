@@ -19,6 +19,10 @@ get('/([a-z]+)', function($tag){
 	echo $tag;
 });
 
+get('/many', ['fn1', 'fn2']);
+function fn1(){ echo 'fn1 called'; }
+function fn2(){ echo 'fn2 called'; }
+
 post('/do/something', 'Controller::do_sth');
 class Controller
 {
